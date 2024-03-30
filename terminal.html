@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bussin Terminal</title>
-    <link rel="stylesheet" href="styles.css1">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -29,12 +29,15 @@
     <script>
         // Function to handle the "Run Code" button click event
         function runCode() {
-            // Get the code entered by the user from the textarea
+            // Get the Bussin code entered by the user from the textarea
             var code = document.getElementById("code-input").value;
             
-            // Execute the code using the Bussin interpreter or compiler
-            // Assuming executeCode function is defined in interpreter.js
-            executeCode(code);
+            // Execute the Bussin code using the executeCode function from interpreter.js
+            var output = executeCode(code);
+            
+            // Display the output in the terminal output area
+            var terminalOutput = document.getElementById("terminal-output");
+            terminalOutput.innerHTML = output;
         }
     </script>
 </body>
