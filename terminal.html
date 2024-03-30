@@ -17,7 +17,7 @@
             </div>
             <form id="code-form">
                 <textarea id="code-input" placeholder="Enter your Bussin code here..." rows="10"></textarea>
-                <button type="submit" id="run-button">Run Code</button>
+                <button type="button" id="run-button" onclick="runCode()">Run Code</button>
             </form>
         </section>
     </main>
@@ -25,6 +25,17 @@
         <p>&copy; 2024 Bussin Programming Language</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="interpreter.js"></script>
+    <script>
+        // Function to handle the "Run Code" button click event
+        function runCode() {
+            // Get the code entered by the user from the textarea
+            var code = document.getElementById("code-input").value;
+            
+            // Execute the code using the Bussin interpreter or compiler
+            // Assuming executeCode function is defined in interpreter.js
+            executeCode(code);
+        }
+    </script>
 </body>
 </html>
