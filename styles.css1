@@ -2,14 +2,15 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* Light gray background */
+    background-color: #f0f0f0; /* Light gray background */
 }
 
 header {
     background-color: #306998; /* Python blue */
     color: #fff;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -19,43 +20,46 @@ header h1 {
 
 main {
     padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
 }
 
 #terminal {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #000; /* Black background */
-    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff; /* White background */
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 #terminal-output {
     margin-bottom: 20px;
-    color: #fff; /* White text */
 }
 
 #code-form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center form content */
+    align-items: center;
 }
 
 #code-input {
     width: 100%;
-    height: 300px; /* Increase height */
-    padding: 10px;
-    margin-bottom: 20px; /* Increase bottom margin */
-    background-color: #111; /* Dark gray background */
+    height: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5; /* Light gray background */
     border: 1px solid #ccc;
     border-radius: 5px;
-    resize: vertical;
-    color: #fff; /* White text */
+    resize: none;
+    font-size: 16px;
+    color: #333; /* Dark gray text */
 }
 
 button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 18px;
     background-color: #306998; /* Python blue */
     color: #fff;
@@ -72,10 +76,9 @@ button:hover {
 footer {
     background-color: #222;
     color: #fff;
-    padding: 10px;
+    padding: 20px 0;
     text-align: center;
-}
-
-footer p {
-    margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
